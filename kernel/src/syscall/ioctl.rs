@@ -4,6 +4,7 @@ use super::SyscallReturn;
 use crate::{
     fs::{
         file_table::{FdFlags, FileDesc},
+        file_table::{FdFlags, FileDesc},
         utils::{IoctlCmd, StatusFlags},
     },
     prelude::*,
