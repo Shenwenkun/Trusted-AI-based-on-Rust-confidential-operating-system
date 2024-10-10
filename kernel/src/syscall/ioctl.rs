@@ -4,6 +4,7 @@ use super::SyscallReturn;
 use crate::{
     fs::{
         file_table::{FdFlags, FileDesc},
+        file_table::{FdFlags, FileDesc},
         utils::{IoctlCmd, StatusFlags},
     },
     prelude::*,
@@ -47,6 +48,13 @@ pub fn sys_ioctl(fd: FileDesc, cmd: u32, arg: Vaddr, ctx: &Context) -> Result<Sy
             let file_table = ctx.process.file_table().lock();
             let entry = file_table.get_entry(fd)?;
             entry.set_flags(flags);
+            0
+        }
+        IoctlCmd::FIONCLEX => {
+            // Clears the close-on-exec flag of the file.
+            let file_table = ctx.process.file_table().lock();
+            let entry = file_table.get_entry(fd)?;
+            entry.clear_flags();
             0
         }
         _ => file.ioctl(ioctl_cmd, arg)?,
