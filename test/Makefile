@@ -23,11 +23,18 @@ INITRAMFS_EMPTY_DIRS := \
 INITRAMFS_ALL_DIRS := \
 	$(INITRAMFS)/etc \
 	$(INITRAMFS)/lib/x86_64-linux-gnu \
+	$(INITRAMFS)/lib/python3.10 \
+	$(INITRAMFS)/lib/python3 \
 	$(INITRAMFS)/lib64 \
 	$(INITRAMFS)/bin \
 	$(INITRAMFS)/sbin \
 	$(INITRAMFS)/usr/bin \
+	$(INITRAMFS)/usr/python \
+	$(INITRAMFS)/usr/lib/python3 \
+	$(INITRAMFS)/usr/lib/python3.10 \
 	$(INITRAMFS)/usr/local \
+	$(INITRAMFS)/usr/local/bin \
+	$(INITRAMFS)/usr/local/lib/python3.10/dist-packages \
 	$(INITRAMFS)/test \
 	$(INITRAMFS)/benchmark \
 	$(INITRAMFS_EMPTY_DIRS)
@@ -43,6 +50,11 @@ $(INITRAMFS)/lib/x86_64-linux-gnu: | $(VDSO_LIB)
 	@cp -L /lib/x86_64-linux-gnu/libm.so.6 $@
 	@cp -L /lib/x86_64-linux-gnu/libgcc_s.so.1 $@
 	@cp -L /lib/x86_64-linux-gnu/libpthread.so.0 $@
+	@cp -L /lib/x86_64-linux-gnu/libexpat.so.1 $@
+	@cp -L /lib/x86_64-linux-gnu/libc.so.6 $@
+	@cp -L /lib/x86_64-linux-gnu/libffi.so.8 $@
+	@cp -L /lib/x86_64-linux-gnu/librt.so.1 $@
+	@cp -L /lib/x86_64-linux-gnu/ld-linux-x86-64.so.2  $@
 	@# required for benchmarks
 	@cp -L /lib/x86_64-linux-gnu/libcrypto.so.3 $@
 	@cp -L /lib/x86_64-linux-gnu/libcrypt.so.1 $@
@@ -64,6 +76,7 @@ $(INITRAMFS)/lib/x86_64-linux-gnu: | $(VDSO_LIB)
 	@# required for VDSO
 	@cp -L $(VDSO_LIB) $@
 
+
 $(VDSO_LIB): | $(VDSO_DIR) $(BINARY_CACHE_DIR)/vdso64.so
 	@# TODO: use a custom compiled vdso.so file in the future.
 	@cp $(BINARY_CACHE_DIR)/vdso64.so $@
@@ -74,6 +87,14 @@ $(VDSO_DIR):
 $(BINARY_CACHE_DIR)/vdso64.so:
 	@mkdir -p $(BINARY_CACHE_DIR)
 	@$(ATOMIC_WGET) $@ "https://raw.githubusercontent.com/asterinas/linux_vdso/2a6d2db/vdso64.so"
+
+$(INITRAMFS)/lib/python3.10:
+	@mkdir -p $@
+	@cp -r /lib/python3.10/* $@
+
+$(INITRAMFS)/lib/python3:
+	@mkdir -p $@
+	@cp -r /lib/python3/* $@
 
 $(INITRAMFS)/lib64:
 	@mkdir -p $@
@@ -87,20 +108,66 @@ $(INITRAMFS)/etc:
 $(INITRAMFS)/bin:
 	@mkdir -p $@
 	@/bin/busybox --install -s $@
+	@cp /bin/python $@
+	@cp /bin/python3 $@
+	@cp /bin/python3.10 $@
+	@cp /bin/py3clean $@
+	@cp /bin/py3compile $@
+	@cp /bin/py3versions $@
+	@cp /bin/pydoc3 $@
+	@cp /bin/pydoc3.10 $@
+	@cp /bin/pygettext3 $@
+	@cp /bin/pygettext3.10 $@
+	@cp /bin/pip $@
+	@cp /bin/pip3 $@
+	@cp /bin/pip3.10 $@
 
 $(INITRAMFS)/sbin:
 	@mkdir -p $@
 	@cp /sbin/ldconfig $@
 	@cp /sbin/ldconfig.real $@
 
+$(INITRAMFS)/usr/python:
+	@mkdir -p $@
+	@cp -r $(CUR_DIR)/python/* $@
+
 $(INITRAMFS)/usr/bin: | $(INITRAMFS)/bin
 	@mkdir -p $@
 	@cp /usr/bin/busybox $@
+	@cp /usr/bin/python $@
+	@cp /usr/bin/python3 $@
+	@cp /usr/bin/python3.10 $@
+	@cp /usr/bin/py3clean $@
+	@cp /usr/bin/py3compile $@
+	@cp /usr/bin/py3versions $@
+	@cp /usr/bin/pydoc3 $@
+	@cp /usr/bin/pydoc3.10 $@
+	@cp /usr/bin/pygettext3 $@
+	@cp /usr/bin/pygettext3.10 $@
+	@cp /bin/pip $@
+	@cp /bin/pip3 $@
+	@cp /bin/pip3.10 $@
+
+$(INITRAMFS)/usr/lib/python3:
+	@mkdir -p $@
+	@cp -r /usr/lib/python3/* $@
+
+$(INITRAMFS)/usr/lib/python3.10:
+	@mkdir -p $@
+	@cp -r /usr/lib/python3.10/* $@
 
 $(INITRAMFS)/usr/local:
 	@mkdir -p $@
 	@cp -r /usr/local/nginx $@
 	@cp -r /usr/local/redis $@
+
+$(INITRAMFS)/usr/local/bin:
+	@mkdir -p $@
+	@cp -r /usr/local/bin/* $@
+
+$(INITRAMFS)/usr/local/lib/python3.10/dist-packages:
+	@mkdir -p $@
+	@cp -r /usr/local/lib/python3.10/dist-packages/* $@
 
 .PHONY: $(INITRAMFS)/test
 $(INITRAMFS)/test:

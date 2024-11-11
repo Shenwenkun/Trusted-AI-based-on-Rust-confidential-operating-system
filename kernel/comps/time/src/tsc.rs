@@ -7,8 +7,7 @@ use alloc::sync::Arc;
 use core::sync::atomic::{AtomicU64, Ordering};
 
 use ostd::{
-    arch::{read_tsc, timer::TIMER_FREQ, tsc_freq},
-    timer,
+    arch::{read_tsc, timer::TIMER_FREQ, tsc_freq}, early_println, timer
 };
 use spin::Once;
 
@@ -30,6 +29,7 @@ pub(super) fn init() {
 }
 
 fn init_clock() {
+    early_println!("TSC freq:{:x?}",tsc_freq());
     CLOCK.call_once(|| {
         Arc::new(ClockSource::new(
             tsc_freq(),
