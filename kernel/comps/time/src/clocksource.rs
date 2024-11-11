@@ -109,7 +109,7 @@ impl ClockSource {
         if cycles <= max_cycles {
             self.coeff * cycles
         } else {
-            log::warn!(
+            log::trace!(
                 "The clock source becomes not reliable since an \
                 interval of {} cycles exceeds the maximum delay {}(s)",
                 cycles,

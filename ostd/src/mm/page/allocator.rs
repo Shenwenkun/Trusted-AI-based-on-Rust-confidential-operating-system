@@ -21,9 +21,9 @@ use crate::{
 
 /// FrameAllocator with a counter for allocated memory
 pub(in crate::mm) struct CountingFrameAllocator {
-    allocator: FrameAllocator,
-    total: usize,
-    allocated: usize,
+    allocator: FrameAllocator,//用于实际内存分配的 FrameAllocator
+    total: usize,//可用内存总量
+    allocated: usize,//已分配内存量
 }
 
 impl CountingFrameAllocator {
