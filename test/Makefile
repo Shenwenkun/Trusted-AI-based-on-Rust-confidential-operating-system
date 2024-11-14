@@ -55,6 +55,8 @@ $(INITRAMFS)/lib/x86_64-linux-gnu: | $(VDSO_LIB)
 	@cp -L /lib/x86_64-linux-gnu/libffi.so.8 $@
 	@cp -L /lib/x86_64-linux-gnu/librt.so.1 $@
 	@cp -L /lib/x86_64-linux-gnu/ld-linux-x86-64.so.2  $@
+	@cp -L /lib/x86_64-linux-gnu/libbz2.so.1.0 $@
+	@cp -L /lib/x86_64-linux-gnu/liblzma.so.5 $@
 	@# required for benchmarks
 	@cp -L /lib/x86_64-linux-gnu/libcrypto.so.3 $@
 	@cp -L /lib/x86_64-linux-gnu/libcrypt.so.1 $@

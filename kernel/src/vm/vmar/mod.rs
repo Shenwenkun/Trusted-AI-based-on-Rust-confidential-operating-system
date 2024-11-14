@@ -162,10 +162,10 @@ impl VmarInner {
             // Else, we find a free region that can satisfy the length and align requirement.
             // Here, we use a simple brute-force algorithm to find the first free range that can satisfy.
             // FIXME: A randomized algorithm may be more efficient.
-            for (region_base, free_region) in &self.free_regions {
+            for (region_base, free_region) in self.free_regions.iter().rev() {
                 let region_start = free_region.start();
                 let region_end = free_region.end();
-                let child_vmar_real_start = region_start.align_up(align);
+                let child_vmar_real_start = ((region_end + region_start) / 2- child_size).align_down(align);
                 let child_vmar_real_end =
                     child_vmar_real_start
                         .checked_add(child_size)

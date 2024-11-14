@@ -44,10 +44,10 @@ pub fn sys_sched_getaffinity(
     ctx.get_user_space()
         .write_val(cpu_set_ptr, &dummy_cpu_set)?;
 
-    Ok(SyscallReturn::Return(0))
+    Ok(SyscallReturn::Return(num_cpus as isize))
 }
 
-const CPU_SETSIZE: usize = 1024; // Max number of CPU bits.
+const CPU_SETSIZE: usize = 128; // Max number of CPU bits.
 const __NCPUBITS: usize = 8 * mem::size_of::<usize>();
 
 #[derive(Debug, Clone, Copy, Pod)]
