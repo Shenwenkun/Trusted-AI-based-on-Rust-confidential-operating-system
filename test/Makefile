@@ -132,6 +132,7 @@ $(INITRAMFS)/sbin:
 $(INITRAMFS)/usr/python:
 	@mkdir -p $@
 	@cp -r $(CUR_DIR)/python/* $@
+	@cp -r /root/asterinas/test_benchmark  $@
 
 $(INITRAMFS)/usr/bin: | $(INITRAMFS)/bin
 	@mkdir -p $@

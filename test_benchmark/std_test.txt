@@ -1,0 +1,271 @@
+== CPython 3.10.12 (main, Nov 6 2024, 20:22:13) [GCC 11.4.0]
+== Linux-6.2.16-lp155.2-default-x86_64-with-glibc2.35 little-endian
+== cwd: /tmp/test_python_16177æ
+== CPU count: 48
+== encodings: locale=UTF-8, FS=utf-8
+0:00:00 load avg: 1.22 Run tests sequentially
+0:00:00 load avg: 1.22 [  1/424] test_grammar
+hi
+0:00:00 load avg: 1.22 [  2/424] test_opcodes
+0:00:00 load avg: 1.22 [  3/424] test_dict
+0:00:00 load avg: 1.22 [  4/424] test_builtin
+0:00:00 load avg: 1.22 [  5/424] test_exceptions
+0:00:01 load avg: 1.22 [  6/424] test_types
+0:00:01 load avg: 1.22 [  7/424] test_unittest
+0:00:02 load avg: 1.28 [  8/424] test_doctest
+0:00:03 load avg: 1.28 [  9/424] test_doctest2
+0:00:03 load avg: 1.28 [ 10/424] test_support
+0:00:04 load avg: 1.28 [ 11/424] test___all__
+0:00:04 load avg: 1.28 [ 12/424] test___future__
+0:00:04 load avg: 1.28 [ 13/424] test__locale
+0:00:05 load avg: 1.28 [ 14/424] test__opcode
+0:00:05 load avg: 1.28 [ 15/424] test__osx_support
+0:00:05 load avg: 1.28 [ 16/424] test__xxsubinterpreters
+0:00:05 load avg: 1.28 [ 17/424] test_abc
+0:00:06 load avg: 1.28 [ 18/424] test_abstract_numbers
+0:00:06 load avg: 1.28 [ 19/424] test_aifc
+0:00:06 load avg: 1.28 [ 20/424] test_argparse
+0:00:06 load avg: 1.28 [ 21/424] test_array
+0:00:08 load avg: 1.34 [ 22/424] test_asdl_parser
+test_asdl_parser skipped -- test irrelevant for an installed Python
+0:00:08 load avg: 1.34 [ 23/424] test_ast -- test_asdl_parser skipped
+0:00:09 load avg: 1.34 [ 24/424] test_asyncgen
+0:00:10 load avg: 1.34 [ 25/424] test_asynchat
+0:00:11 load avg: 1.34 [ 26/424] test_asyncio
+0:01:13 load avg: 1.60 [ 27/424] test_asyncore -- test_asyncio passed in 1 min 1 sec
+0:01:15 load avg: 1.60 [ 28/424] test_atexit
+0:01:15 load avg: 1.60 [ 29/424] test_audioop
+0:01:15 load avg: 1.60 [ 30/424] test_audit
+0:01:16 load avg: 1.60 [ 31/424] test_augassign
+0:01:17 load avg: 1.60 [ 32/424] test_base64
+0:01:17 load avg: 1.63 [ 33/424] test_baseexception
+0:01:17 load avg: 1.63 [ 34/424] test_bdb
+0:01:18 load avg: 1.63 [ 35/424] test_bigaddrspace
+0:01:18 load avg: 1.63 [ 36/424] test_bigmem
+0:01:18 load avg: 1.63 [ 37/424] test_binascii
+0:01:18 load avg: 1.63 [ 38/424] test_binhex
+0:01:18 load avg: 1.63 [ 39/424] test_binop
+0:01:19 load avg: 1.63 [ 40/424] test_bisect
+0:01:19 load avg: 1.63 [ 41/424] test_bool
+0:01:19 load avg: 1.63 [ 42/424] test_buffer
+0:01:22 load avg: 1.63 [ 43/424] test_bufio
+0:01:22 load avg: 1.74 [ 44/424] test_bytes
+0:01:23 load avg: 1.74 [ 45/424] test_bz2
+0:01:25 load avg: 1.74 [ 46/424] test_c_locale_coercion
+0:01:26 load avg: 1.74 [ 47/424] test_calendar
+0:01:27 load avg: 1.76 [ 48/424] test_call
+0:01:28 load avg: 1.76 [ 49/424] test_cgi
+0:01:28 load avg: 1.76 [ 50/424] test_cgitb
+0:01:28 load avg: 1.76 [ 51/424] test_charmapcodec
+0:01:28 load avg: 1.76 [ 52/424] test_check_c_globals
+test_check_c_globals skipped -- c-analyzer directory could not be found
+0:01:28 load avg: 1.76 [ 53/424] test_class -- test_check_c_globals skipped
+0:01:28 load avg: 1.76 [ 54/424] test_clinic
+test_clinic skipped -- clinic directory could not be found
+0:01:28 load avg: 1.76 [ 55/424] test_cmath -- test_clinic skipped
+0:01:29 load avg: 1.76 [ 56/424] test_cmd
+0:01:29 load avg: 1.76 [ 57/424] test_cmd_line
+0:01:30 load avg: 1.76 [ 58/424] test_cmd_line_script
+0:01:32 load avg: 1.76 [ 59/424] test_code
+0:01:32 load avg: 1.76 [ 60/424] test_code_module
+0:01:32 load avg: 1.78 [ 61/424] test_codeccallbacks
+0:01:32 load avg: 1.78 [ 62/424] test_codecencodings_cn
+0:01:32 load avg: 1.78 [ 63/424] test_codecencodings_hk
+0:01:33 load avg: 1.78 [ 64/424] test_codecencodings_iso2022
+0:01:33 load avg: 1.78 [ 65/424] test_codecencodings_jp
+0:01:33 load avg: 1.78 [ 66/424] test_codecencodings_kr
+0:01:33 load avg: 1.78 [ 67/424] test_codecencodings_tw
+0:01:33 load avg: 1.78 [ 68/424] test_codecmaps_cn
+0:01:34 load avg: 1.78 [ 69/424] test_codecmaps_hk
+0:01:34 load avg: 1.78 [ 70/424] test_codecmaps_jp
+0:01:34 load avg: 1.78 [ 71/424] test_codecmaps_kr
+0:01:34 load avg: 1.78 [ 72/424] test_codecmaps_tw
+0:01:34 load avg: 1.78 [ 73/424] test_codecs
+0:01:35 load avg: 1.78 [ 74/424] test_codeop
+0:01:35 load avg: 1.78 [ 75/424] test_collections
+0:01:35 load avg: 1.78 [ 76/424] test_colorsys
+0:01:35 load avg: 1.78 [ 77/424] test_compare
+0:01:36 load avg: 1.78 [ 78/424] test_compile
+0:01:37 load avg: 1.80 [ 79/424] test_compileall
+0:01:44 load avg: 1.81 [ 80/424] test_complex
+0:01:44 load avg: 1.81 [ 81/424] test_concurrent_futures
+0:04:03 load avg: 1.23 [ 82/424] test_configparser -- test_concurrent_futures passed in 2 min 19 sec
+0:04:04 load avg: 1.23 [ 83/424] test_contains
+0:04:04 load avg: 1.23 [ 84/424] test_context
+0:04:05 load avg: 1.23 [ 85/424] test_contextlib
+0:04:06 load avg: 1.23 [ 86/424] test_contextlib_async
+0:04:06 load avg: 1.23 [ 87/424] test_copy
+0:04:07 load avg: 1.23 [ 88/424] test_copyreg
+0:04:07 load avg: 1.23 [ 89/424] test_coroutines
+0:04:07 load avg: 1.29 [ 90/424] test_cprofile
+0:04:08 load avg: 1.29 [ 91/424] test_crashers
+0:04:08 load avg: 1.29 [ 92/424] test_crypt
+0:04:09 load avg: 1.29 [ 93/424] test_csv
+0:04:09 load avg: 1.29 [ 94/424] test_ctypes
+0:04:10 load avg: 1.29 [ 95/424] test_curses
+test_curses skipped -- Use of the 'curses' resource not enabled
+0:04:10 load avg: 1.29 [ 96/424] test_dataclasses -- test_curses skipped (resource denied)
+0:04:10 load avg: 1.29 [ 97/424] test_datetime
+0:04:13 load avg: 1.27 [ 98/424] test_dbm
+0:04:13 load avg: 1.27 [ 99/424] test_dbm_dumb
+0:04:14 load avg: 1.27 [100/424] test_dbm_gnu
+test_dbm_gnu skipped -- No module named '_gdbm', please install the python3-gdbm package
+0:04:14 load avg: 1.27 [101/424] test_dbm_ndbm -- test_dbm_gnu skipped
+0:04:14 load avg: 1.27 [102/424] test_decimal
+0:04:15 load avg: 1.27 [103/424] test_decorators
+0:04:15 load avg: 1.27 [104/424] test_defaultdict
+0:04:16 load avg: 1.27 [105/424] test_deque
+0:04:17 load avg: 1.33 [106/424] test_descr
+0:04:18 load avg: 1.33 [107/424] test_descrtut
+0:04:18 load avg: 1.33 [108/424] test_devpoll
+test_devpoll skipped -- test works only on Solaris OS family
+0:04:19 load avg: 1.33 [109/424] test_dict_version -- test_devpoll skipped
+0:04:19 load avg: 1.33 [110/424] test_dictcomps
+0:04:19 load avg: 1.33 [111/424] test_dictviews
+0:04:19 load avg: 1.33 [112/424] test_difflib
+0:04:19 load avg: 1.33 [113/424] test_dis
+0:04:20 load avg: 1.33 [114/424] test_distutils
+0:04:20 load avg: 1.33 [115/424/1] test_docxmlrpc -- test_distutils failed (3 errors, 1 failure)
+0:04:22 load avg: 1.30 [116/424/1] test_dtrace
+0:04:22 load avg: 1.30 [117/424/1] test_dynamic
+0:04:23 load avg: 1.30 [118/424/1] test_dynamicclassattribute
+0:04:23 load avg: 1.30 [119/424/1] test_eintr
+0:04:29 load avg: 1.28 [120/424/1] test_email
+0:04:34 load avg: 1.41 [121/424/1] test_embed
+0:04:34 load avg: 1.41 [122/424/1] test_ensurepip
+0:04:35 load avg: 1.41 [123/424/2] test_enum -- test_ensurepip failed (uncaught exception)
+0:04:35 load avg: 1.41 [124/424/2] test_enumerate
+0:04:35 load avg: 1.41 [125/424/2] test_eof
+0:04:36 load avg: 1.41 [126/424/2] test_epoll
+0:04:36 load avg: 1.41 [127/424/2] test_errno
+0:04:36 load avg: 1.41 [128/424/2] test_exception_hierarchy
+0:04:36 load avg: 1.41 [129/424/2] test_exception_variations
+0:04:37 load avg: 1.41 [130/424/2] test_extcall
+0:04:37 load avg: 1.41 [131/424/2] test_faulthandler
+0:04:55 load avg: 1.43 [132/424/2] test_fcntl
+0:04:56 load avg: 1.43 [133/424/2] test_file
+0:04:56 load avg: 1.43 [134/424/2] test_file_eintr
+0:04:58 load avg: 1.40 [135/424/2] test_filecmp
+0:04:58 load avg: 1.40 [136/424/2] test_fileinput
+0:04:58 load avg: 1.40 [137/424/2] test_fileio
+0:04:59 load avg: 1.40 [138/424/2] test_finalization
+0:05:01 load avg: 1.40 [139/424/2] test_float
+0:05:01 load avg: 1.40 [140/424/2] test_flufl
+0:05:01 load avg: 1.40 [141/424/2] test_fnmatch
+0:05:02 load avg: 1.40 [142/424/2] test_fork1
+0:05:07 load avg: 1.42 [143/424/2] test_format
+0:05:07 load avg: 1.42 [144/424/2] test_fractions
+0:05:08 load avg: 1.42 [145/424/2] test_frame
+0:05:08 load avg: 1.42 [146/424/2] test_frozen
+0:05:08 load avg: 1.42 [147/424/2] test_fstring
+0:05:08 load avg: 1.42 [148/424/2] test_ftplib
+0:05:17 load avg: 1.46 [149/424/2] test_funcattrs
+0:05:17 load avg: 1.51 [150/424/2] test_functools
+0:05:18 load avg: 1.51 [151/424/2] test_future
+0:05:18 load avg: 1.51 [152/424/2] test_future3
+0:05:19 load avg: 1.51 [153/424/2] test_future4
+0:05:19 load avg: 1.51 [154/424/2] test_future5
+0:05:19 load avg: 1.51 [155/424/2] test_gc
+0:05:23 load avg: 1.55 [156/424/2] test_gdb
+test_gdb skipped -- test_gdb only works on source builds at the moment.
+0:05:23 load avg: 1.55 [157/424/2] test_generator_stop -- test_gdb skipped
+0:05:23 load avg: 1.55 [158/424/2] test_generators
+0:05:24 load avg: 1.55 [159/424/2] test_genericalias
+0:05:24 load avg: 1.55 [160/424/2] test_genericclass
+0:05:24 load avg: 1.55 [161/424/2] test_genericpath
+0:05:24 load avg: 1.55 [162/424/2] test_genexps
+0:05:25 load avg: 1.55 [163/424/2] test_getopt
+0:05:25 load avg: 1.55 [164/424/2] test_getpass
+0:05:25 load avg: 1.55 [165/424/2] test_gettext
+0:05:25 load avg: 1.55 [166/424/2] test_glob
+0:05:26 load avg: 1.55 [167/424/2] test_global
+0:05:26 load avg: 1.55 [168/424/2] test_graphlib
+0:05:26 load avg: 1.55 [169/424/2] test_grp
+0:05:26 load avg: 1.55 [170/424/2] test_gzip
+0:05:27 load avg: 1.55 [171/424/2] test_hash
+0:05:27 load avg: 1.58 [172/424/2] test_hashlib
+0:05:28 load avg: 1.58 [173/424/2] test_heapq
+0:05:28 load avg: 1.58 [174/424/2] test_hmac
+0:05:29 load avg: 1.58 [175/424/2] test_html
+0:05:29 load avg: 1.58 [176/424/2] test_htmlparser
+0:05:29 load avg: 1.58 [177/424/2] test_http_cookiejar
+0:05:29 load avg: 1.58 [178/424/2] test_http_cookies
+0:05:30 load avg: 1.58 [179/424/2] test_httplib
+0:05:30 load avg: 1.58 [180/424/2] test_httpservers
+0:05:31 load avg: 1.58 [181/424/2] test_idle
+0:05:31 load avg: 1.58 [182/424/3] test_imaplib -- test_idle failed (uncaught exception)
+
+test_idle failed (uncaught exception)
+
+== Tests result: FAILURE, INTERRUPTED ==
+Test suite interrupted by signal SIGINT.
+
+243 tests omitted:
+    test_imaplib test_imghdr test_imp test_import test_importlib
+    test_index test_inspect test_int test_int_literal
+    test_interpreters test_io test_ioctl test_ipaddress
+    test_isinstance test_iter test_iterlen test_itertools test_json
+    test_keyword test_keywordonlyarg test_kqueue test_largefile
+    test_lib2to3 test_linecache test_list test_listcomps test_lltrace
+    test_locale test_logging test_long test_longexp test_lzma
+    test_mailbox test_mailcap test_marshal test_math test_memoryio
+    test_memoryview test_metaclass test_mimetypes test_minidom
+    test_mmap test_module test_modulefinder test_msilib
+    test_multibytecodec test_multiprocessing_fork
+    test_multiprocessing_forkserver test_multiprocessing_main_handling
+    test_multiprocessing_spawn test_named_expressions test_netrc
+    test_nis test_nntplib test_ntpath test_numeric_tower test_opcache
+    test_openpty test_operator test_optparse test_ordered_dict test_os
+    test_ossaudiodev test_osx_env test_pathlib test_patma test_pdb
+    test_peepholer test_peg_generator test_pickle test_picklebuffer
+    test_pickletools test_pipes test_pkg test_pkgutil test_platform
+    test_plistlib test_poll test_popen test_poplib
+    test_positional_only_arg test_posix test_posixpath test_pow
+    test_pprint test_print test_profile test_property test_pstats
+    test_pty test_pulldom test_pwd test_py_compile test_pyclbr
+    test_pydoc test_pyexpat test_queue test_quopri test_raise
+    test_random test_range test_re test_readline test_regrtest
+    test_repl test_reprlib test_resource test_richcmp test_rlcompleter
+    test_robotparser test_runpy test_sax test_sched test_scope
+    test_script_helper test_secrets test_select test_selectors
+    test_set test_setcomps test_shelve test_shlex test_shutil
+    test_signal test_site test_slice test_smtpd test_smtplib
+    test_smtpnet test_sndhdr test_socket test_socketserver test_sort
+    test_source_encoding test_spwd test_sqlite test_ssl test_startfile
+    test_stat test_statistics test_strftime test_string
+    test_string_literals test_stringprep test_strptime test_strtod
+    test_struct test_structseq test_subclassinit test_subprocess
+    test_sunau test_sundry test_super test_symtable test_syntax
+    test_sys test_sys_setprofile test_sys_settrace test_sysconfig
+    test_syslog test_tabnanny test_tarfile test_tcl test_telnetlib
+    test_tempfile test_textwrap test_thread test_threadedtempfile
+    test_threading test_threading_local test_threadsignals test_time
+    test_timeit test_timeout test_tix test_tk test_tokenize test_tools
+    test_trace test_traceback test_tracemalloc test_ttk_guionly
+    test_ttk_textonly test_tuple test_turtle test_type_annotations
+    test_type_comments test_typechecks test_typing test_ucn test_unary
+    test_unicode test_unicode_file test_unicode_file_functions
+    test_unicode_identifiers test_unicodedata test_univnewlines
+    test_unpack test_unpack_ex test_unparse test_urllib test_urllib2
+    test_urllib2_localnet test_urllib2net test_urllib_response
+    test_urllibnet test_urlparse test_userdict test_userlist
+    test_userstring test_utf8_mode test_utf8source test_uu test_uuid
+    test_venv test_wait3 test_wait4 test_warnings test_wave
+    test_weakref test_weakset test_webbrowser test_winconsoleio
+    test_winreg test_winsound test_with test_wsgiref test_xdrlib
+    test_xml_dom_minicompat test_xml_etree test_xml_etree_c
+    test_xmlrpc test_xmlrpc_net test_xxlimited test_xxtestfuzz
+    test_yield_from test_zipapp test_zipfile test_zipfile64
+    test_zipimport test_zipimport_support test_zlib test_zoneinfo
+
+171 tests OK.
+
+3 tests failed:
+    test_distutils test_ensurepip test_idle
+
+7 tests skipped:
+    test_asdl_parser test_check_c_globals test_clinic test_curses
+    test_dbm_gnu test_devpoll test_gdb
+
+Total duration: 5 min 40 sec
+Tests result: FAILURE, INTERRUPTED
